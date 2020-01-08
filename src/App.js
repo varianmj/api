@@ -16,10 +16,8 @@ export default class App extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const user ={
-      name : this.state.name
-    };
-    axios.post('https://jsonplaceholder.typicode.com/users', { user })
+    ;
+    axios.delete('https://jsonplaceholder.typicode.com/users/${this.state.name}')
   .then(response=> {
     console.log(response)
     console.log(response.data);
